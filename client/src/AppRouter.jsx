@@ -1,5 +1,6 @@
 
 import HomePage from "./HomePage"
+import SpecificSupport from "./pagesSupport/SpecificSupport";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FormSupport from "./components/FormSupport";
 
