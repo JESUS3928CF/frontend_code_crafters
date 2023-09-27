@@ -14,7 +14,7 @@ const HomePage = () => {
                 <p>Como crees que podemos mejorar para evitar la desercion de las carreras STEM?</p>
               </div>
               <div>
-                <input className="px-20 py-2 mr-5 text-start" type="text" />
+                <input className="w-72 px-1 py-2 mr-5 " type="text" />
                 <button className="px-6 py-2 text-white bg-blue-600 rounded-lg">
                   Enviar
                 </button>
