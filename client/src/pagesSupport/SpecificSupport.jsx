@@ -1,8 +1,9 @@
 import NavBar from "../components/NavBar"
 
+////use of gpt chat to create some styles in this component
 const SpecificSupport = () => {
   return (
-    <div>
+    <>
         <NavBar/>
         <div className="flex flex-col h-screen justify-center items-center">
             <h1 className="font-bold text-2xl mb-5">Apoyo de Sostenimiento Regular</h1>
@@ -37,7 +38,7 @@ const SpecificSupport = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </>
   )
 }
 

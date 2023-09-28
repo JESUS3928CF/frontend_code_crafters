@@ -1,22 +1,25 @@
+import { Link } from "react-router-dom"
+
+// Using GPT Chat as a Design Aid
 const NavBar = () => {
   return (
-    // Using ChatGPT to query properties and style UIs 
-    <nav className="w-full p-5 flex justify-between items-center font-normal border-b-2 border-gray-400 border-">
+    //use of gpt chat to create some styles in this component
+    <nav className="w-full p-5 flex justify-between items-center font-normal border-b-2 shadow-lg border-gray-300 border-">
       <div className="">
-        <h1 className="text-3xl font-bold">Logo</h1>
+        <Link to='/' className="text-3xl font-bold">Logo</Link>
       </div>
       <ul className="flex justify-center space-x-5">
         <li>
-          <a href="#" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Inicio</a>
+          <Link to='/' className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Inicio</Link>
         </li>
         <li>
-          <a href="#" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Apoyos</a>
+          <Link to="/form-support" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Apoyos</Link>
         </li>
         <li>
-          <a href="#" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Acerca de Nosotros</a>
+          <Link to="/" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Acerca de Nosotros</Link>
         </li>
         <li>
-          <a href="#" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Ayuda</a>
+          <Link to="/" className="pr-5 cursor-pointer hover:text-sky-600 transition-all ease-in">Ayuda</Link>
         </li>
       </ul>
     </nav>

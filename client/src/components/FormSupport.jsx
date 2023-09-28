@@ -1,12 +1,14 @@
 import React from 'react'
 import NavBar from './NavBar'
 
+//use of gpt chat to create some styles in this component
 const FormSupport = () => {
     return (
         <>
-        <NavBar/>
-            <div className='flex justify-center items-center h-screen'>
-                <form className='bg-white py-10 px-5 md:w-1/3 rounded-xl shadow-xl border border-black'>
+            <NavBar />
+            <h3 className='text-center text-3xl font-bold mt-5'>Buscar Apoyos</h3>
+            <div className='flex justify-center items-center mt-10'>
+                <form className='bg-white py-10 px-5 md:w-1/3 rounded-xl shadow-xl border border-gray-600'>
                     <h3 className='text-center mb-3 text-xl font-bold'>Te ayudaremos a buscar el apoyo que nesecitas</h3>
                     <label htmlFor="nombre" className="text-gray-700 font-semibold text-base">¿A qué institución perteneces?</label>
                     <input type="text"
