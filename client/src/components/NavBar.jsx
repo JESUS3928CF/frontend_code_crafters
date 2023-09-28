@@ -6,7 +6,7 @@ const NavBar = () => {
     //use of gpt chat to create some styles in this component
     <nav className="w-full p-5 flex justify-between items-center font-normal border-b-2 shadow-lg border-gray-300 border-">
       <div className="">
-        <Link to='/' className="text-3xl font-bold">Logo</Link>
+        <Link to='/' className="text-3xl font-bold">STEM-SOS</Link>
       </div>
       <ul className="flex justify-center space-x-5">
         <li>
