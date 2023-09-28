@@ -5,7 +5,9 @@ import NavBar from './NavBar';
 //use of gpt chat to create some styles in this component
 const FormSupport = () => {
     const [institutions, setInstitutions] = useState([]);
+    const [typeInstitutions, setTypeInstitutions] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
+
     useEffect(() => {
         const fetchInstitutions = async () => {
             const response = await axios.get(
@@ -14,12 +16,25 @@ const FormSupport = () => {
             );
             const data = response.data;
 
-            console.log("datos " + data)
+            console.log('datos ' + data);
             setInstitutions(data);
         };
 
         fetchInstitutions();
     }, [searchQuery]);
+
+    useEffect(() => {
+        const fetchTypeInstitutions = async () => {
+            const response = await axios.get(
+                'http://localhost:8000/api/v1/typeinstitutes/'
+            );
+            const data = response.data;
+
+            setTypeInstitutions(data);
+        };
+
+        fetchTypeInstitutions();
+    }, []);
 
     return (
         <>
@@ -45,12 +60,31 @@ const FormSupport = () => {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
+
                     <p> Instituciones :</p>
                     <ul className='list-disc mt-5 pl-5'>
                         {institutions.map((institution) => (
                             <li key={institution.id}>{institution.name}</li>
                         ))}
                     </ul>
+
+                    <label
+                        htmlFor='nombre'
+                        className='text-gray-700 font-semibold text-base'
+                    >
+                        Tipo de apoyo
+                    </label>
+                    <select name='typeInstituteId' id='typeInstituteId'>
+                        {typeInstitutions.map((typeInstitution) => (
+                            <option
+                                key={typeInstitution.id}
+                                value={typeInstitution.id}
+                            >
+                                {typeInstitution.name}
+                            </option>
+                        ))}
+                    </select>
+                    
                     <input
                         type='submit'
                         value='Buscar apoyo'
